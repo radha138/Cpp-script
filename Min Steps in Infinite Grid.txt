@@ -1,0 +1,23 @@
+int Solution::coverPoints(vector<int> &X, vector<int> &Y) {
+ 
+   int size = X.size();
+ 
+   int toreturn = 0;
+   
+ for(int i=1;i<size;i++)
+    {
+       
+ int x = abs(X[i]-X[i-1]);
+        
+int y = abs(Y[i]-Y[i-1]);
+     
+   int temp = min(x,y);
+      
+  toreturn  += temp+(x-temp)+(y-temp);
+   
+ }
+    
+return toreturn;
+
+}
+ 
